@@ -1,18 +1,26 @@
 //
-//  ZYDelegatePort.m
+//  ZYDelegatePorts.m
 //  MethodForward
 //
 //  Created by wzp on 2018/9/26.
 //  Copyright © 2018 wzp. All rights reserved.
 //
 
-#import "ZYDelegatePort.h"
+#import "ZYDelegatePorts.h"
 
-@interface ZYDelegatePort()
+@interface ZYDelegatePorts()
+
+/**
+ 弱引用
+ */
 @property (nonatomic, strong) NSPointerArray *refTargets;
 @end
 
-@implementation ZYDelegatePort
+@implementation ZYDelegatePorts
+
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
 
 - (void)configureDelegateTargets:(NSArray *)targets {
     for (id obj in targets) {
@@ -56,7 +64,7 @@
 
 - (NSPointerArray *)refTargets {
     if (!_refTargets) {
-        _refTargets = [[NSPointerArray alloc] init];
+        _refTargets = [NSPointerArray weakObjectsPointerArray];
     }
     return _refTargets;
 }

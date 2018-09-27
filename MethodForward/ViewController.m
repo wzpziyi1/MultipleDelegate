@@ -7,11 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "ZYDelegatePort.h"
+#import "ZYDelegatePorts.h"
 #import "ZYHeaderBiggerPort.h"
 
-#define kScreenW [UIScreen mainScreen].bounds.size.width
-#define kScreenH [UIScreen mainScreen].bounds.size.height
+
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -19,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @property (nonatomic, strong) ZYHeaderBiggerPort *headerPort;
-@property (nonatomic, strong) ZYDelegatePort *delegatePorts;
+@property (nonatomic, strong) ZYDelegatePorts *delegatePorts;
 
 @property (nonatomic, strong) UIView *headerView;
 @end
@@ -34,14 +33,17 @@
     self.headerPort = [[ZYHeaderBiggerPort alloc] init];
     self.headerPort.imgView = self.imgView;
     
-    self.delegatePorts = [[ZYDelegatePort alloc] init];
+    self.delegatePorts = [[ZYDelegatePorts alloc] init];
     [self.delegatePorts configureDelegateTargets:@[self, self.headerPort]];
     
     self.tableView.dataSource = (id<UITableViewDataSource>)self.delegatePorts;
     self.tableView.delegate   = (id<UITableViewDelegate>)self.delegatePorts;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headerView;
-    
+}
+
+- (void)dealloc {
+    NSLog(@"%s", __func__);
 }
 
 - (void)layoutUI {
