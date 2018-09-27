@@ -6,8 +6,10 @@
 //  Copyright © 2018 wzp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ZYDelegatePort : NSPort
+@property (nonatomic, weak) id owner;
 
+- (void)configureDelegateTargets:(NSArray *)targets;
 @end
