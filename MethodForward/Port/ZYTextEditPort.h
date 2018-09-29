@@ -11,4 +11,6 @@
 @interface ZYTextEditPort : NSPort<UITextViewDelegate>
 @property (nonatomic, weak) UITextView *textView;
 @property (nonatomic, weak) UILabel *limitLabel;
+
+@property (nonatomic, assign) NSUInteger maxCount;
 @end

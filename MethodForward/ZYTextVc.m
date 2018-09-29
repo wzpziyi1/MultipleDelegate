@@ -7,10 +7,15 @@
 //
 
 #import "ZYTextVc.h"
+#import "ZYDelegatePorts.h"
+#import "ZYTextEditPort.h"
 
-@interface ZYTextVc ()
+@interface ZYTextVc ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *limitLabel;
+
+@property (nonatomic, strong) ZYDelegatePorts *ports;
+@property (nonatomic, strong) ZYTextEditPort *textPort;
 @end
 
 @implementation ZYTextVc
@@ -18,16 +23,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.textPort = [[ZYTextEditPort alloc] init];
+    self.textPort.textView = self.textView;
+    self.textPort.limitLabel = self.limitLabel;
+    self.textPort.maxCount = 20;
+    
+    self.ports = [[ZYDelegatePorts alloc] init];
+    [self.ports configureDelegateTargets:@[self.textPort]];
+    
+    self.textView.delegate = (id<UITextViewDelegate>)self.ports;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    NSLog(@"销毁成功：%s", __func__);
 }
-*/
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    NSLog(@"输入完毕：%s", __func__);
+}
 
 @end

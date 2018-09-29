@@ -8,6 +8,7 @@
 
 #import "ZYInitializeVc.h"
 #import "ViewController.h"
+#import "ZYTextVc.h"
 
 @interface ZYInitializeVc () <UITableViewDelegate, UITableViewDataSource>
 
@@ -42,7 +43,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     cell.textLabel.text = @"  ";
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 || indexPath.row == 1) {
         cell.textLabel.text = self.titles[indexPath.row];
     }
     return cell;
@@ -52,6 +53,11 @@
 {
     if (indexPath.row == 0) {
         ViewController *vc = [[ViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+    if (indexPath.row == 1) {
+        ZYTextVc *vc = [[ZYTextVc alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
@@ -66,7 +72,7 @@
 #pragma mark - getter && setter
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@"下拉放大图片"];
+        _titles = @[@"下拉放大图片", @"limit textView"];
     }
     return _titles;
 }

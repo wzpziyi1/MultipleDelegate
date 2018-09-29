@@ -43,7 +43,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"%s", __func__);
+    NSLog(@"销毁成功：%s", __func__);
 }
 
 - (void)layoutUI {
