@@ -1,5 +1,5 @@
 //
-//  ZYDelegatePorts.h
+//  ZYDelegateProxys.h
 //  MethodForward
 //
 //  Created by wzp on 2018/9/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZYDelegatePorts : NSPort
+@interface ZYDelegateProxys : NSObject
 @property (nonatomic, weak) id owner;
 
 - (void)configureDelegateTargets:(NSArray *)targets;

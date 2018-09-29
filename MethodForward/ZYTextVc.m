@@ -7,14 +7,14 @@
 //
 
 #import "ZYTextVc.h"
-#import "ZYDelegatePorts.h"
+#import "ZYDelegateProxys.h"
 #import "ZYTextEditPort.h"
 
 @interface ZYTextVc ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *limitLabel;
 
-@property (nonatomic, strong) ZYDelegatePorts *ports;
+@property (nonatomic, strong) ZYDelegateProxys *proxys;
 @property (nonatomic, strong) ZYTextEditPort *textPort;
 @end
 
@@ -29,10 +29,10 @@
     self.textPort.limitLabel = self.limitLabel;
     self.textPort.maxCount = 15;
     
-    self.ports = [[ZYDelegatePorts alloc] init];
-    [self.ports configureDelegateTargets:@[self.textPort]];
+    self.proxys = [ZYDelegateProxys alloc];
+    [self.proxys configureDelegateTargets:@[self.textPort]];
     
-    self.textView.delegate = (id<UITextViewDelegate>)self.ports;
+    self.textView.delegate = (id<UITextViewDelegate>)self.proxys;
 }
 
 - (void)dealloc {

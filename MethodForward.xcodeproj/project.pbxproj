@@ -10,7 +10,7 @@
 		093AC1FE215F57F100D4C1FA /* ZYTextVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 093AC1FC215F57F100D4C1FA /* ZYTextVc.m */; };
 		093AC1FF215F57F100D4C1FA /* ZYTextVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093AC1FD215F57F100D4C1FA /* ZYTextVc.xib */; };
 		0943059A215CD77300700CBC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09430599215CD77200700CBC /* ViewController.xib */; };
-		094305A0215CD7FE00700CBC /* ZYDelegatePorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943059C215CD7FE00700CBC /* ZYDelegatePorts.m */; };
+		094305A0215CD7FE00700CBC /* ZYDelegateProxys.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943059C215CD7FE00700CBC /* ZYDelegateProxys.m */; };
 		094305A1215CD7FE00700CBC /* ZYHeaderBiggerPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943059D215CD7FE00700CBC /* ZYHeaderBiggerPort.m */; };
 		094305A5215CD8B200700CBC /* ZYInitializeVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 094305A3215CD8B200700CBC /* ZYInitializeVc.m */; };
 		098A3C15215F5A8500C87652 /* ZYTextEditPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A3C14215F5A8500C87652 /* ZYTextEditPort.m */; };
@@ -45,9 +45,9 @@
 		093AC1FC215F57F100D4C1FA /* ZYTextVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextVc.m; sourceTree = "<group>"; };
 		093AC1FD215F57F100D4C1FA /* ZYTextVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYTextVc.xib; sourceTree = "<group>"; };
 		09430599215CD77200700CBC /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		0943059C215CD7FE00700CBC /* ZYDelegatePorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDelegatePorts.m; sourceTree = "<group>"; };
+		0943059C215CD7FE00700CBC /* ZYDelegateProxys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDelegateProxys.m; sourceTree = "<group>"; };
 		0943059D215CD7FE00700CBC /* ZYHeaderBiggerPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYHeaderBiggerPort.m; sourceTree = "<group>"; };
-		0943059E215CD7FE00700CBC /* ZYDelegatePorts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDelegatePorts.h; sourceTree = "<group>"; };
+		0943059E215CD7FE00700CBC /* ZYDelegateProxys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDelegateProxys.h; sourceTree = "<group>"; };
 		0943059F215CD7FE00700CBC /* ZYHeaderBiggerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYHeaderBiggerPort.h; sourceTree = "<group>"; };
 		094305A2215CD8B200700CBC /* ZYInitializeVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYInitializeVc.h; sourceTree = "<group>"; };
 		094305A3215CD8B200700CBC /* ZYInitializeVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYInitializeVc.m; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		0943059B215CD7FE00700CBC /* Port */ = {
 			isa = PBXGroup;
 			children = (
-				0943059E215CD7FE00700CBC /* ZYDelegatePorts.h */,
-				0943059C215CD7FE00700CBC /* ZYDelegatePorts.m */,
+				0943059E215CD7FE00700CBC /* ZYDelegateProxys.h */,
+				0943059C215CD7FE00700CBC /* ZYDelegateProxys.m */,
 				0943059F215CD7FE00700CBC /* ZYHeaderBiggerPort.h */,
 				0943059D215CD7FE00700CBC /* ZYHeaderBiggerPort.m */,
 				098A3C13215F5A8500C87652 /* ZYTextEditPort.h */,
@@ -305,7 +305,7 @@
 				094305A5215CD8B200700CBC /* ZYInitializeVc.m in Sources */,
 				0993E9CC215B7A3300224AE7 /* main.m in Sources */,
 				094305A1215CD7FE00700CBC /* ZYHeaderBiggerPort.m in Sources */,
-				094305A0215CD7FE00700CBC /* ZYDelegatePorts.m in Sources */,
+				094305A0215CD7FE00700CBC /* ZYDelegateProxys.m in Sources */,
 				093AC1FE215F57F100D4C1FA /* ZYTextVc.m in Sources */,
 				098A3C15215F5A8500C87652 /* ZYTextEditPort.m in Sources */,
 				0993E9BE215B7A3200224AE7 /* AppDelegate.m in Sources */,

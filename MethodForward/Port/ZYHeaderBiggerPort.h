@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZYHeaderBiggerPort : NSPort<UIScrollViewDelegate>
+@interface ZYHeaderBiggerPort : NSObject<UIScrollViewDelegate>
 @property (nonatomic, weak) UIView *imgView;
 
 

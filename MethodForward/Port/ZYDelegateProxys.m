@@ -1,14 +1,14 @@
 //
-//  ZYDelegatePorts.m
+//  ZYDelegateProxys.m
 //  MethodForward
 //
 //  Created by wzp on 2018/9/26.
 //  Copyright © 2018 wzp. All rights reserved.
 //
 
-#import "ZYDelegatePorts.h"
+#import "ZYDelegateProxys.h"
 
-@interface ZYDelegatePorts()
+@interface ZYDelegateProxys()
 
 /**
  弱引用
@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSPointerArray *refTargets;
 @end
 
-@implementation ZYDelegatePorts
+@implementation ZYDelegateProxys
 
 - (void)dealloc {
     NSLog(@"销毁成功：%s", __func__);
@@ -40,6 +40,7 @@
     }
     return NO;
 }
+
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     NSMethodSignature *sig = [super methodSignatureForSelector:aSelector];

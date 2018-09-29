@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZYTextEditPort : NSPort<UITextViewDelegate>
+@interface ZYTextEditPort : NSObject<UITextViewDelegate>
 @property (nonatomic, weak) UITextView *textView;
 @property (nonatomic, weak) UILabel *limitLabel;
 

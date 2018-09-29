@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZYDelegatePorts.h"
+#import "ZYDelegateProxys.h"
 #import "ZYHeaderBiggerPort.h"
 
 
@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @property (nonatomic, strong) ZYHeaderBiggerPort *headerPort;
-@property (nonatomic, strong) ZYDelegatePorts *delegatePorts;
+@property (nonatomic, strong) ZYDelegateProxys *proxys;
 
 @property (nonatomic, strong) UIView *headerView;
 @end
@@ -33,11 +33,11 @@
     self.headerPort = [[ZYHeaderBiggerPort alloc] init];
     self.headerPort.imgView = self.imgView;
     
-    self.delegatePorts = [[ZYDelegatePorts alloc] init];
-    [self.delegatePorts configureDelegateTargets:@[self, self.headerPort]];
+    self.proxys = [ZYDelegateProxys alloc];
+    [self.proxys configureDelegateTargets:@[self, self.headerPort]];
     
-    self.tableView.dataSource = (id<UITableViewDataSource>)self.delegatePorts;
-    self.tableView.delegate   = (id<UITableViewDelegate>)self.delegatePorts;
+    self.tableView.dataSource = (id<UITableViewDataSource>)self.proxys;
+    self.tableView.delegate   = (id<UITableViewDelegate>)self.proxys;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headerView;
 }
