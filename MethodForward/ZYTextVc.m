@@ -27,7 +27,7 @@
     self.textPort = [[ZYTextEditPort alloc] init];
     self.textPort.textView = self.textView;
     self.textPort.limitLabel = self.limitLabel;
-    self.textPort.maxCount = 20;
+    self.textPort.maxCount = 15;
     
     self.ports = [[ZYDelegatePorts alloc] init];
     [self.ports configureDelegateTargets:@[self.textPort]];
