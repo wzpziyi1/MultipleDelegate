@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093AC1FE215F57F100D4C1FA /* ZYTextVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 093AC1FC215F57F100D4C1FA /* ZYTextVc.m */; };
+		093AC1FF215F57F100D4C1FA /* ZYTextVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093AC1FD215F57F100D4C1FA /* ZYTextVc.xib */; };
 		0943059A215CD77300700CBC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09430599215CD77200700CBC /* ViewController.xib */; };
 		094305A0215CD7FE00700CBC /* ZYDelegatePorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943059C215CD7FE00700CBC /* ZYDelegatePorts.m */; };
 		094305A1215CD7FE00700CBC /* ZYHeaderBiggerPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943059D215CD7FE00700CBC /* ZYHeaderBiggerPort.m */; };
 		094305A5215CD8B200700CBC /* ZYInitializeVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 094305A3215CD8B200700CBC /* ZYInitializeVc.m */; };
+		098A3C15215F5A8500C87652 /* ZYTextEditPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A3C14215F5A8500C87652 /* ZYTextEditPort.m */; };
 		0993E9BE215B7A3200224AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993E9BD215B7A3200224AE7 /* AppDelegate.m */; };
 		0993E9C1215B7A3200224AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993E9C0215B7A3200224AE7 /* ViewController.m */; };
 		0993E9C6215B7A3300224AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0993E9C5215B7A3300224AE7 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093AC1FB215F57F100D4C1FA /* ZYTextVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTextVc.h; sourceTree = "<group>"; };
+		093AC1FC215F57F100D4C1FA /* ZYTextVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextVc.m; sourceTree = "<group>"; };
+		093AC1FD215F57F100D4C1FA /* ZYTextVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYTextVc.xib; sourceTree = "<group>"; };
 		09430599215CD77200700CBC /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		0943059C215CD7FE00700CBC /* ZYDelegatePorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDelegatePorts.m; sourceTree = "<group>"; };
 		0943059D215CD7FE00700CBC /* ZYHeaderBiggerPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYHeaderBiggerPort.m; sourceTree = "<group>"; };
@@ -46,6 +52,8 @@
 		094305A2215CD8B200700CBC /* ZYInitializeVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYInitializeVc.h; sourceTree = "<group>"; };
 		094305A3215CD8B200700CBC /* ZYInitializeVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYInitializeVc.m; sourceTree = "<group>"; };
 		094305A8215CD9D400700CBC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		098A3C13215F5A8500C87652 /* ZYTextEditPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTextEditPort.h; sourceTree = "<group>"; };
+		098A3C14215F5A8500C87652 /* ZYTextEditPort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextEditPort.m; sourceTree = "<group>"; };
 		0993E9B9215B7A3200224AE7 /* MethodForward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodForward.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0993E9BC215B7A3200224AE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0993E9BD215B7A3200224AE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +103,8 @@
 				0943059C215CD7FE00700CBC /* ZYDelegatePorts.m */,
 				0943059F215CD7FE00700CBC /* ZYHeaderBiggerPort.h */,
 				0943059D215CD7FE00700CBC /* ZYHeaderBiggerPort.m */,
+				098A3C13215F5A8500C87652 /* ZYTextEditPort.h */,
+				098A3C14215F5A8500C87652 /* ZYTextEditPort.m */,
 			);
 			path = Port;
 			sourceTree = "<group>";
@@ -130,6 +140,9 @@
 				0993E9BF215B7A3200224AE7 /* ViewController.h */,
 				0993E9C0215B7A3200224AE7 /* ViewController.m */,
 				09430599215CD77200700CBC /* ViewController.xib */,
+				093AC1FB215F57F100D4C1FA /* ZYTextVc.h */,
+				093AC1FC215F57F100D4C1FA /* ZYTextVc.m */,
+				093AC1FD215F57F100D4C1FA /* ZYTextVc.xib */,
 				0993E9C5215B7A3300224AE7 /* Assets.xcassets */,
 				0993E9C7215B7A3300224AE7 /* LaunchScreen.storyboard */,
 				0993E9CA215B7A3300224AE7 /* Info.plist */,
@@ -262,6 +275,7 @@
 			files = (
 				0993E9C9215B7A3300224AE7 /* LaunchScreen.storyboard in Resources */,
 				0943059A215CD77300700CBC /* ViewController.xib in Resources */,
+				093AC1FF215F57F100D4C1FA /* ZYTextVc.xib in Resources */,
 				0993E9C6215B7A3300224AE7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +306,8 @@
 				0993E9CC215B7A3300224AE7 /* main.m in Sources */,
 				094305A1215CD7FE00700CBC /* ZYHeaderBiggerPort.m in Sources */,
 				094305A0215CD7FE00700CBC /* ZYDelegatePorts.m in Sources */,
+				093AC1FE215F57F100D4C1FA /* ZYTextVc.m in Sources */,
+				098A3C15215F5A8500C87652 /* ZYTextEditPort.m in Sources */,
 				0993E9BE215B7A3200224AE7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
