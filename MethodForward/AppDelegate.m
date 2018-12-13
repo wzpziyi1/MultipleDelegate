@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZYInitializeVc.h"
+#import "YYCommonMallocLogger.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     [self.window makeKeyAndVisible];
     ZYInitializeVc *vc = [[ZYInitializeVc alloc] init];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    malloc_logger = malloc_stack_logger;
     return YES;
 }
 

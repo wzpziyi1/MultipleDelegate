@@ -21,6 +21,10 @@
 		0993E9CC215B7A3300224AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993E9CB215B7A3300224AE7 /* main.m */; };
 		0993E9D6215B7A3400224AE7 /* MethodForwardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993E9D5215B7A3400224AE7 /* MethodForwardTests.m */; };
 		0993E9E1215B7A3400224AE7 /* MethodForwardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993E9E0215B7A3400224AE7 /* MethodForwardUITests.m */; };
+		09A2108721C2072A002E3021 /* YYCommonMallocLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09A2108521C2072A002E3021 /* YYCommonMallocLogger.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09A2108A21C20774002E3021 /* YYMemoryDetectorManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09A2108921C20774002E3021 /* YYMemoryDetectorManager.mm */; };
+		09A2109021C23A96002E3021 /* YYOOMDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09A2108F21C23A96002E3021 /* YYOOMDetector.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09A2109321C2476E002E3021 /* YYChunkInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09A2109221C2476E002E3021 /* YYChunkInfo.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,15 @@
 		0993E9DC215B7A3400224AE7 /* MethodForwardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MethodForwardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0993E9E0215B7A3400224AE7 /* MethodForwardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodForwardUITests.m; sourceTree = "<group>"; };
 		0993E9E2215B7A3400224AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A2108521C2072A002E3021 /* YYCommonMallocLogger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = YYCommonMallocLogger.mm; sourceTree = "<group>"; };
+		09A2108621C2072A002E3021 /* YYCommonMallocLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonMallocLogger.h; sourceTree = "<group>"; };
+		09A2108821C20774002E3021 /* YYMemoryDetectorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMemoryDetectorManager.h; sourceTree = "<group>"; };
+		09A2108921C20774002E3021 /* YYMemoryDetectorManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = YYMemoryDetectorManager.mm; sourceTree = "<group>"; };
+		09A2108B21C208DF002E3021 /* YYMemoryMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMemoryMacro.h; sourceTree = "<group>"; };
+		09A2108E21C23A96002E3021 /* YYOOMDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYOOMDetector.h; sourceTree = "<group>"; };
+		09A2108F21C23A96002E3021 /* YYOOMDetector.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = YYOOMDetector.mm; sourceTree = "<group>"; };
+		09A2109121C2476E002E3021 /* YYChunkInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYChunkInfo.h; sourceTree = "<group>"; };
+		09A2109221C2476E002E3021 /* YYChunkInfo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = YYChunkInfo.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +145,7 @@
 		0993E9BB215B7A3200224AE7 /* MethodForward */ = {
 			isa = PBXGroup;
 			children = (
+				09A2108421C2072A002E3021 /* MemoryObserve */,
 				0943059B215CD7FE00700CBC /* Port */,
 				0993E9BC215B7A3200224AE7 /* AppDelegate.h */,
 				0993E9BD215B7A3200224AE7 /* AppDelegate.m */,
@@ -168,6 +182,22 @@
 				0993E9E2215B7A3400224AE7 /* Info.plist */,
 			);
 			path = MethodForwardUITests;
+			sourceTree = "<group>";
+		};
+		09A2108421C2072A002E3021 /* MemoryObserve */ = {
+			isa = PBXGroup;
+			children = (
+				09A2108821C20774002E3021 /* YYMemoryDetectorManager.h */,
+				09A2108921C20774002E3021 /* YYMemoryDetectorManager.mm */,
+				09A2108621C2072A002E3021 /* YYCommonMallocLogger.h */,
+				09A2108521C2072A002E3021 /* YYCommonMallocLogger.mm */,
+				09A2108B21C208DF002E3021 /* YYMemoryMacro.h */,
+				09A2108E21C23A96002E3021 /* YYOOMDetector.h */,
+				09A2108F21C23A96002E3021 /* YYOOMDetector.mm */,
+				09A2109121C2476E002E3021 /* YYChunkInfo.h */,
+				09A2109221C2476E002E3021 /* YYChunkInfo.mm */,
+			);
+			path = MemoryObserve;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,12 +333,16 @@
 			files = (
 				0993E9C1215B7A3200224AE7 /* ViewController.m in Sources */,
 				094305A5215CD8B200700CBC /* ZYInitializeVc.m in Sources */,
+				09A2108721C2072A002E3021 /* YYCommonMallocLogger.mm in Sources */,
 				0993E9CC215B7A3300224AE7 /* main.m in Sources */,
 				094305A1215CD7FE00700CBC /* ZYHeaderBiggerPort.m in Sources */,
 				094305A0215CD7FE00700CBC /* ZYDelegateProxys.m in Sources */,
+				09A2109021C23A96002E3021 /* YYOOMDetector.mm in Sources */,
+				09A2108A21C20774002E3021 /* YYMemoryDetectorManager.mm in Sources */,
 				093AC1FE215F57F100D4C1FA /* ZYTextVc.m in Sources */,
 				098A3C15215F5A8500C87652 /* ZYTextEditPort.m in Sources */,
 				0993E9BE215B7A3200224AE7 /* AppDelegate.m in Sources */,
+				09A2109321C2476E002E3021 /* YYChunkInfo.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

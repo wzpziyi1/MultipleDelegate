@@ -40,6 +40,7 @@
     self.tableView.delegate   = (id<UITableViewDelegate>)self.proxys;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headerView;
+    
 }
 
 - (void)dealloc {
