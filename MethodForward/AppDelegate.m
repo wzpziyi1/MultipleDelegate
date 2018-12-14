@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZYInitializeVc.h"
-#import "YYCommonMallocLogger.h"
+#import "YYMemoryDetectorManager.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +24,7 @@
     ZYInitializeVc *vc = [[ZYInitializeVc alloc] init];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     
-    malloc_logger = malloc_stack_logger;
+    [[YYMemoryDetectorManager sharedInstance] beginMemoryDetector:1 * 1024 * 1024];
     return YES;
 }
 

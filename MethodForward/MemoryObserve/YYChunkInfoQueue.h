@@ -1,14 +1,15 @@
 //
-//  YYChunkInfo.h
+//  YYChunkInfoQueue.h
 //  MethodForward
 //
 //  Created by wzp on 2018/12/13.
 //  Copyright © 2018 wzp. All rights reserved.
 //
-#ifndef YYChunkInfo_H
-#define YYChunkInfo_H
+#ifndef YYChunkInfoQueue_H
+#define YYChunkInfoQueue_H
 #import <Foundation/Foundation.h>
 #include <iostream>
+#include<queue>
 #include "YYMemoryMacro.h"
 #import <libkern/OSAtomic.h>
 #import <sys/mman.h>
@@ -25,5 +26,7 @@ public:
     char *m_dateStr = NULL;
     vm_address_t *m_stacks[max_stack_depth];
 };
-
+void addInfoToQueue(const YYChunkInfo &);
+void deleteTopInfoFromQueue();
+YYChunkInfo queueTopInfo();
 #endif

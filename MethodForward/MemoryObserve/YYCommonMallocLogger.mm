@@ -14,7 +14,8 @@
 #if __has_feature(objc_arc)
 #error This file must be compiled without ARC. Use -fno-objc-arc flag.
 #endif
-void malloc_stack_logger(uint32_t type, uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t result, uint32_t backtrace_to_skip)
+extern YYOOMDetector *globalDetector;
+void oom_malloc_stack_logger(uint32_t type, uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t result, uint32_t backtrace_to_skip)
 {
     /*
      type : 这次捕获到的内存信息类型 32位的二进制： ... 0000 0000 0000 0000

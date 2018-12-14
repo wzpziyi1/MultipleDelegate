@@ -18,5 +18,6 @@
 #define stack_logging_type_mapped_file_or_shared_mem 128
 
 #define max_stack_depth 30
+#define max_queue_count 40
 
 #endif /* YYMemoryMacro_h */

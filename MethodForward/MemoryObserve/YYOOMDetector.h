@@ -24,5 +24,4 @@ public:
     void getChunkStack(size_t size);
     
 };
-YYOOMDetector *globalDetector = NULL;
 #endif

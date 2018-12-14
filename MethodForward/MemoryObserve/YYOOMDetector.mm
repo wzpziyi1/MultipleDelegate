@@ -8,14 +8,13 @@
 
 #import "YYOOMDetector.h"
 #import "YYCommonMallocLogger.h"
-#import "YYChunkInfo.h"
+#import "YYChunkInfoQueue.h"
 
 #if __has_feature(objc_arc)
 #error This file must be compiled without ARC. Use -fno-objc-arc flag.
 #endif
 
 static NSDateFormatter *df = nil;
-
 YYOOMDetector::YYOOMDetector(size_t chunkSize) : m_chunkSize(chunkSize) {}
 YYOOMDetector::~YYOOMDetector() {}
 
@@ -24,7 +23,7 @@ void YYOOMDetector::beginDetector() {
         df = [[NSDateFormatter alloc] init];
         df.dateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
     }
-    malloc_logger = malloc_stack_logger;
+    malloc_logger = oom_malloc_stack_logger;
 }
 void YYOOMDetector::stopDetector() {
     malloc_logger = NULL;
@@ -37,11 +36,11 @@ void YYOOMDetector::getChunkStack(size_t size) {
     
     YYChunkInfo info;
     info.m_chunkSize = size;
-//    info.m_dateStr = [dateStr1 UTF8String];
+    info.m_dateStr = const_cast<char*>([dateStr1 UTF8String]);
     for (int i = 0; i < depth; i++) {
         info.m_stacks[i] = stacks[i];
     }
-    
+    addInfoToQueue(info);
 }
 
 

@@ -13,6 +13,7 @@
 #error  does not support Objective-C Automatic Reference Counting (ARC)
 #endif
 
+YYOOMDetector *globalDetector = NULL;
 inline void dispatch_safe_main_async(void(^block)(void)) {
     if (!block) return;
     if ([NSThread isMainThread]) {
@@ -24,7 +25,6 @@ inline void dispatch_safe_main_async(void(^block)(void)) {
         });
     }
 }
-
 @interface YYMemoryDetectorManager ()
 @property (nonatomic, assign, readwrite) NSUInteger detectorSize;
 @end
